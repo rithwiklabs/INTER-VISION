@@ -1,7 +1,6 @@
 # INTER VISION
 
 ## Network Reconnaissance and Footprinting Framework
-![Repo Size](https://img.shields.io/github/repo-size/rithwiklabs/INTER-VISION)
 ![Platform](https://img.shields.io/badge/Platform-Kali_Linux-blue)
 ![Domain](https://img.shields.io/badge/Domain-Cybersecurity-red)
 ![Status](https://img.shields.io/badge/Status-Completed-success)
