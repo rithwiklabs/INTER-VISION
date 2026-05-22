@@ -1,0 +1,71 @@
+Commands Used
+
+Project:
+Network Reconnaissance and Footprinting Framework
+
+========================================
+1. WHOIS Enumeration
+
+whois nmap.org
+
+whois scanme.nmap.org
+
+========================================
+2. DNS Enumeration
+
+nslookup scanme.nmap.org
+
+dig scanme.nmap.org
+========================================
+3. MX Record Enumeration
+
+nslookup -type=mx nmap.org
+
+dig mx nmap.org
+========================================
+4. NS Record Enumeration
+
+nslookup -type=ns nmap.org
+
+dig ns nmap.org
+========================================
+5. Subdomain Enumeration
+
+sublist3r -d nmap.org
+========================================
+6. Google Dorking Queries
+
+site:nmap.org filetype:pdf
+
+site:nmap.org login
+
+site:nmap.org intitle:"index of"
+========================================
+7. Network Connectivity Analysis
+
+ping -c 4 scanme.nmap.org
+========================================
+8. Traceroute Analysis
+
+traceroute scanme.nmap.org
+========================================
+9. Web Server Fingerprinting
+
+curl -I http://scanme.nmap.org
+========================================
+10. Port Scanning
+
+nmap -F scanme.nmap.org
+
+nmap -sV scanme.nmap.org
+
+nmap -A scanme.nmap.org
+
+nmap -Pn scanme.nmap.org
+
+nmap -O scanme.nmap.org
+
+
+Conclusion: 
+
+The above commands were used to perform ethical reconnaissance, DNS analysis, network scanning, web fingerprinting, and service detection on authorized public targets.

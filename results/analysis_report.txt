@@ -1,0 +1,51 @@
+Analysis Report
+
+Introduction:
+--------------
+This report documents the reconnaissance and footprinting activities performed against an authorized public target using ethical and non-intrusive methods.
+
+Methodology:
+-------------
+The following phases were performed:
+
+1. WHOIS Enumeration
+2. DNS Enumeration
+3. MX and NS Record Analysis
+4. Subdomain Enumeration
+5. Google Dorking
+6. Ping Analysis
+7. Traceroute Analysis
+8. Web Server Fingerprinting
+9. Port Scanning
+
+Tools Used:
+------------
+- Kali Linux
+- WHOIS
+- DIG
+- NSLOOKUP
+- Nmap
+- CURL
+- Ping
+- Traceroute
+- Sublist3r
+
+Observations:
+--------------
+1. Public domain registration details were visible.
+
+2. DNS records exposed server-related information.
+
+3. Several subdomains were identified through passive enumeration.
+
+4. Search engine indexing exposed publicly accessible files and web resources.
+
+5. Network analysis revealed active connectivity and routing information.
+
+6. Web server headers disclosed information about server technologies.
+
+7. Port scanning identified active services running on the target system.
+
+Conclusion:
+-------------
+The project successfully demonstrated practical reconnaissance techniques used in cybersecurity assessments. The gathered information highlights the importance of reducing unnecessary public exposure and securing network services.

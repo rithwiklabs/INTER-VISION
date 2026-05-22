@@ -1,0 +1,32 @@
+Detected Services Report
+
+Target: scanme.nmap.org
+
+Open Ports Identified:
+----------------------
+
+Port 22/tcp
+Service: SSH
+Status : Open
+
+Port 80/tcp
+Service: HTTP
+Status : Open
+
+Additional Observations:
+------------------------
+
+1. The target system responded to ICMP requests.
+
+2. HTTP headers indicated Apache web server usage.
+
+3. DNS records resolved successfully for both IPv4 and IPv6 addresses.
+
+4. Traceroute analysis displayed multiple intermediate network hops.
+
+5. MX records indicated externally managed mail server infrastructure.
+
+Security Observation:
+---------------------
+
+The detected services are publicly accessible and can potentially provide information useful during reconnaissance activities if not properly secured.

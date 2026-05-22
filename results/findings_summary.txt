@@ -1,0 +1,30 @@
+Findings Summary
+
+Project:
+Network Reconnaissance and Footprinting Framework
+
+Summary:
+The reconnaissance and footprinting activities were
+performed on an authorized public target using
+Kali Linux tools and standard network analysis
+utilities.
+
+Key Findings:
+1. Domain registration information was successfully identified using WHOIS enumeration.
+
+2. DNS records including A, MX, and NS records were discovered through DNS analysis tools.
+
+3. Multiple publicly accessible subdomains were identified during subdomain enumeration.
+
+4. Publicly indexed resources and login portals were identified using Google Dorking techniques.
+
+5. Network latency and connectivity information were obtained using ping analysis.
+
+6. Network path tracing was successfully performed using traceroute.
+
+7. Web server header information revealed details about the server software and operating system.
+
+8. Open ports and active services were detected using Nmap scanning techniques.
+
+Conclusion:
+The project successfully demonstrated the importance of reconnaissance and footprinting in cybersecurity assessments and ethical hacking methodologies.
