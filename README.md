@@ -1,11 +1,11 @@
 # INTER VISION
 
-## Network Reconnaissance and Footprinting Framework
+## Network Reconnaissance and Footprinting 
 ![Platform](https://img.shields.io/badge/Platform-Kali_Linux-blue)
 ![Domain](https://img.shields.io/badge/Domain-Cybersecurity-red)
 ![Status](https://img.shields.io/badge/Status-Completed-success)
 
-INTER VISION is a cybersecurity minor project focused on ethical reconnaissance, footprinting, and network analysis using Kali Linux and open-source security tools. The project demonstrates how publicly accessible information about a target can be gathered and analyzed using standard reconnaissance methodologies.
+Network Reconnaissance and Footprinting is a cybersecurity minor project focused on ethical reconnaissance, footprinting, and network analysis using Kali Linux and open-source security tools. The project demonstrates how publicly accessible information about a target can be gathered and analyzed using standard reconnaissance methodologies.
 
 ---
 
