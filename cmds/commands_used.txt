@@ -4,68 +4,155 @@ Project:
 Network Reconnaissance and Footprinting Framework
 
 ========================================
-1. WHOIS Enumeration
+1. WHOIS ENUMERATION
+========================================
+Purpose: Retrieve domain registration information including registrar, contact details, and nameservers.
 
+Commands:
 whois nmap.org
+  └─ Retrieves WHOIS information for the domain nmap.org
 
 whois scanme.nmap.org
+  └─ Retrieves WHOIS information for the subdomain scanme.nmap.org
+
+Expected Output: Registrar details, registrant info, nameservers, domain expiry date
 
 ========================================
-2. DNS Enumeration
+2. DNS ENUMERATION
+========================================
+Purpose: Resolve domain names to IP addresses and gather DNS information.
 
+Commands:
 nslookup scanme.nmap.org
+  └─ Basic DNS lookup using nameserver query tool
 
 dig scanme.nmap.org
-========================================
-3. MX Record Enumeration
+  └─ Detailed DNS information query with more verbose output
 
+Expected Output: A records (IPv4 addresses) associated with the domain
+
+========================================
+3. MX RECORD ENUMERATION
+========================================
+Purpose: Identify mail servers and email infrastructure responsible for email delivery.
+
+Commands:
 nslookup -type=mx nmap.org
+  └─ Query MX records using nslookup
 
 dig mx nmap.org
-========================================
-4. NS Record Enumeration
+  └─ Query MX records using dig with verbose output
 
+Expected Output: Mail server hostnames and priority values
+
+========================================
+4. NS RECORD ENUMERATION
+========================================
+Purpose: Discover authoritative nameservers for the domain.
+
+Commands:
 nslookup -type=ns nmap.org
+  └─ Query nameserver records using nslookup
 
 dig ns nmap.org
-========================================
-5. Subdomain Enumeration
+  └─ Query nameserver records using dig
 
+Expected Output: List of authoritative nameservers for the domain
+
+========================================
+5. SUBDOMAIN ENUMERATION
+========================================
+Purpose: Discover subdomains associated with the target domain.
+
+Commands:
 sublist3r -d nmap.org
-========================================
-6. Google Dorking Queries
+  └─ Enumerate subdomains for nmap.org using multiple sources
 
+Expected Output: List of discovered subdomains and their associated IP addresses
+
+========================================
+6. GOOGLE DORKING QUERIES
+========================================
+Purpose: Find sensitive information, exposed files, and configuration pages indexed on the target domain.
+
+Commands:
 site:nmap.org filetype:pdf
+  └─ Find all PDF files indexed on the domain
 
 site:nmap.org login
+  └─ Locate login pages and authentication endpoints
 
 site:nmap.org intitle:"index of"
-========================================
-7. Network Connectivity Analysis
+  └─ Find directory listings that may expose file structure
 
+Expected Output: Links to indexed pages potentially exposing sensitive information
+
+========================================
+7. NETWORK CONNECTIVITY ANALYSIS
+========================================
+Purpose: Test basic network connectivity and measure response times. Confirms that the target is online and reachable.
+
+Commands:
 ping -c 4 scanme.nmap.org
-========================================
-8. Traceroute Analysis
+  └─ Send 4 ICMP echo requests to test connectivity
+  └─ Flags: -c 4 (count = 4 packets)
 
+Expected Output: Response times, packet loss, TTL (Time To Live) values
+
+========================================
+8. TRACEROUTE ANALYSIS
+========================================
+Purpose: Identify the network path taken to reach the target showing all intermediate hops.
+
+Commands:
 traceroute scanme.nmap.org
-========================================
-9. Web Server Fingerprinting
+  └─ Display the route packets take to the target
+  └─ Shows all intermediate routers between source and destination
 
+Expected Output: List of hops with IP addresses, hostnames, and response times
+
+========================================
+9. WEB SERVER FINGERPRINTING
+========================================
+Purpose: Identify web server type, version, and HTTP headers to reveal server software details.
+
+Commands:
 curl -I http://scanme.nmap.org
-========================================
-10. Port Scanning
+  └─ Retrieve HTTP headers only (no response body)
+  └─ Flags: -I (headers only)
 
+Expected Output: HTTP headers including Server name, version, Apache/Nginx details
+
+========================================
+10. PORT SCANNING
+========================================
+Purpose: Identify open ports and running services to understand the attack surface.
+
+Commands:
 nmap -F scanme.nmap.org
+  └─ Fast scan of top 100 most common ports
+  └─ Flags: -F (fast/limited port range)
 
 nmap -sV scanme.nmap.org
+  └─ Service version detection on open ports
+  └─ Flags: -sV (service version)
 
 nmap -A scanme.nmap.org
+  └─ Aggressive scan: OS detection, service version, traceroute, NSE scripts
+  └─ Flags: -A (comprehensive scan)
 
 nmap -Pn scanme.nmap.org
+  └─ Skip ping check, assume host is online
+  └─ Flags: -Pn (no ping) - Useful when ping is blocked by firewall
 
 nmap -O scanme.nmap.org
+  └─ OS fingerprinting and detection
+  └─ Flags: -O (OS detection) - Requires root privileges
 
+Expected Output: Open ports, service names, versions, OS information
 
-Conclusion: 
+========================================
+
+Conclusion:
 
 The above commands were used to perform ethical reconnaissance, DNS analysis, network scanning, web fingerprinting, and service detection on authorized public targets.
