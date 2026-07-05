@@ -181,13 +181,44 @@ nmap -F scanme.nmap.org
 
 # Key Findings
 
-- Public domain registration details were identified
-- DNS infrastructure was successfully analyzed
-- Multiple subdomains were discovered
-- Publicly indexed web resources were identified
-- Network latency and routing information were analyzed
-- HTTP headers revealed web server information
-- Open ports and active services were detected
+- **WHOIS Lookup:** `nmap.org` is registered via Dynadot Inc, created on 
+  1999-01-18, expiring 2029-01-18. Domain uses `clientTransferProhibited` 
+  status and DNSSEC is unsigned.
+
+- **DNS Enumeration:** `scanme.nmap.org` resolves to `45.33.32.156` (IPv4) 
+  and `2600:3c01::f03c:91ff:fe18:bb2f` (IPv6).
+
+- **NS Records:** Nameservers are `ns1.linode.com` through `ns5.linode.com`, 
+  indicating DNS is hosted on Linode infrastructure.
+
+- **MX Records:** Mail for `nmap.org` is routed entirely through Google's 
+  mail servers (`ASPMX.L.GOOGLE.COM` and `ASPMX2/3.GOOGLEMAIL.COM`), 
+  confirming Google Workspace is used for email.
+
+- **Subdomain Enumeration:** Sublist3r identified 5 unique subdomains: 
+  `www.nmap.org`, `issues.nmap.org`, `scanme.nmap.org`, `svn.nmap.org`, 
+  and `www.svn.nmap.org`.
+
+- **Google Dorking:** `filetype:pdf` dork surfaced indexed Nmap 
+  documentation PDFs (Table of Contents, Host Discovery Techniques paper). 
+  An `intitle:"index of"` dork revealed an open directory listing at 
+  `scanme.nmap.org/images`, exposing a browsable file index.
+
+- **Ping Analysis:** 4/4 packets received (0% packet loss) against 
+  `scanme.nmap.org`, with round-trip time averaging ~419ms 
+  (min 237ms / max 855ms).
+
+- **Traceroute Analysis:** Only the first hop (local gateway, ~12ms) 
+  responded; all subsequent hops timed out, indicating ICMP is blocked 
+  or filtered along the path to the target.
+
+- **Web Server Fingerprinting:** HTTPS (port 443) refused connection. 
+  HTTP (port 80) returned `200 OK` with header `Server: Apache/2.4.7 (Ubuntu)`, 
+  revealing the web server software and OS.
+
+- **Port Scanning (Nmap):** Fast scan (`-F`) found 2 open ports on 
+  `scanme.nmap.org`: **22/tcp (SSH)** and **80/tcp (HTTP)**. 91 other 
+  common ports were filtered (no response).
 
 ---
 
@@ -211,6 +242,7 @@ nmap -F scanme.nmap.org
 ### Google Dorking
 ![Google Dorking 1](screenshorts/google_dorking_1.png)
 ![Google Dorking 2](screenshorts/google_dorking_2.png)
+![Google Dorking 2](screenshorts/google_dorking_3.png)
 
 ### Ping Analysis
 ![Ping](screenshorts/ping.png)
