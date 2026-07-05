@@ -67,7 +67,6 @@ INTER-VISION_Minor-Project/
 │
 ├── docs/
 │   ├── Minor_Project_Report.pdf
-│   └── Minor_Project_Report.docx
 │
 ├── diagrams/
 │   ├── system_architecture.png
