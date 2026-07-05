@@ -191,18 +191,38 @@ nmap -F scanme.nmap.org
 
 ---
 
-# Screenshots Included
+## Screenshots
 
-The repository contains categorized screenshots for:
+### WHOIS Enumeration
+![WHOIS](screenshorts/whois.png)
 
-- WHOIS Enumeration
-- DNS Analysis
-- MX and NS Record Enumeration
-- Subdomain Enumeration
-- Google Dorking
-- Ping and Traceroute
-- HTTP Fingerprinting
-- Nmap Scanning
+### DNS Enumeration
+![DNS Enumeration](screenshorts/dns_enum.png)
+
+### MX Record Lookup
+![MX Lookup](screenshorts/mx_lookup.png)
+
+### NS Record Lookup
+![NS Lookup](screenshorts/ns_lookup.png)
+
+### Subdomain Enumeration
+![Subdomain Enum](screenshorts/subdomain_enum.png)
+
+### Google Dorking
+![Google Dorking 1](screenshorts/google_dorking_1.png)
+![Google Dorking 2](screenshorts/google_dorking_2.png)
+
+### Ping Analysis
+![Ping](screenshorts/ping.png)
+
+### Traceroute Analysis
+![Traceroute](screenshorts/traceroute.png)
+
+### Web Server Fingerprinting
+![Web Fingerprint](screenshorts/web_fingerprint.png)
+
+### Port Scanning (Nmap)
+![Nmap Scan](screenshorts/nmap_scan.png)
 
 ---
 
